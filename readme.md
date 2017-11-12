@@ -1,4 +1,4 @@
-# Behavioral Cloning Project
+# Behavioral Cloning
 
 **The project includes the following files:**
 * model.py containing the script to create and train the model
@@ -15,7 +15,7 @@ I drove the car for seven laps in the left path and tried the following guidelin
 
 ### Reading and processing the data
 For the training of my model I decided to use four images, three camera images - center, left and right – along with the flipped version of the center image
-<p style="text-align: center;">
+<p align="center">
 <img src ="./images/center.png" />
 <br />
 Center camera image
@@ -33,7 +33,7 @@ Right camera image
 Flipped center camera image
 </p>
 Then, I cropped the image from top (50 pixels) and bottom (20 pixels), so not to use more un-important data and to focus on the desired part of the image
-<p style="text-align: center;">
+<p align="center">
 <img src ="./images/cropped.png" />
 </p>
 And with the center image I recorded the steering as it is, but in case of left and right images I applied a correction factor of 0.1 after trying many factors that was appropriate for the softness of car movement.
@@ -44,8 +44,8 @@ And for normalization, a Lambda layer was used.
 
 ### The model architecture
 When designing my model, I referred to [Nvidia paper End to End Learning for Self-Driving Cars](https://arxiv.org/pdf/1604.07316v1.pdf).
-<p style="text-align: center;">
-<img src ="./images/model.png" />
+<p align="center">
+<img width="400px" src ="./images/model.png" />
 </p>
 I used the same architecture:
 * Normalization layer followed by
